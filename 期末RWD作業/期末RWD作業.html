@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    目前畫面寬度：<span id="res"></span>
+    <script>
+        document.getElementById('res').textContent = window.innerWidth;
+
+        window.onresize = function() {
+            document.getElementById('res').textContent = window.innerWidth;
+        }
+    </script>
+    <style>
+        body {
+            background-color: #BBFFFF;
+            color: black;
+        }
+        
+        img {
+            width: 200px;
+        }
+        
+        header,
+        article,
+        aside,
+        footer {
+            box-sizing: border-box;
+        }
+        
+        @media(min-width:700px) {
+            body {
+                background-color: #BBFFFF;
+            }
+            img {
+                width: 50%;
+            }
+            article {
+                float: left;
+                width: 70%;
+            }
+            aside {
+                float: right;
+                width: 30%;
+            }
+            footer {
+                clear: both;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>RWD網頁介紹</h1>
+    </header>
+
+
+    <article>
+        <section>
+            <h1>
+                網頁是甚麼?
+            </h1>
+            回應式網頁設計（英語：Responsive Web Design，通常縮寫為RWD），或稱自適應網頁設計、響應式網頁設計、對應式網頁設計。 是一種網頁設計的技術，這種設計可使網站在不同的裝置（從桌面電腦顯示器到行動電話或其他行動裝置）上瀏覽時對應不同解析度皆有適合的呈現，減少使用者進行縮放、平移和捲動等操作行為。
+        </section>
+        <section>
+            <h1>
+                行動裝置優先，不引人注目的 JavaScript 和漸進增強
+            </h1>
+            「行動裝置優先」和「非侵入式JavaScript」/「漸進增強」（規劃新網站設計時的策略）是優先於 RWD 的概念：傳統的手機瀏覽器不理解 JavaScript 或者 media queries，因此最初的建議做法是建立一個只有基本框架的網站，接著根據智慧型手機和電腦分別提供增強功能；而不是試著「優雅降級」——使一個複雜的網站在最傳統行動電話上喪失某些功能。
+        </section>
+        <section>
+            <h1>基於瀏覽器，特性或裝置探測的漸進增強</h1>
+            在一個網站必須支援缺乏 JavaScript 的基本的行動裝置的情況下，瀏覽器 (使用者代理) 探測 (也叫做「瀏覽器嗅探」)，和行動裝置探測是推斷某些 HTML 和 CSS 特性是否受支援的兩種方式 (作為漸進增強的基礎)—然而，這些方法不完全可靠。 對於能力更強的行動電話和 PC，可以直接測試瀏覽器對 HTML/CSS 功能的支援 (辨識裝置或者使用者代理字串) 的 JavaScript 框架如 Modernizr, jQuery 和 jQuery Mobile等流行起來。Polyfills可以被用於添加對一些功能的支援—比如，支援media
+            queries (RWD 所需要的)，和在 (舊版本) Internet Explorer 上提高 HTML 5 支援。功能探測在較舊的瀏覽器上也可能不完全可靠: 某些也許會報告一個特性可用，然而它或者是缺失，或者是實現的如此拙劣以至實質上無法工作。
+        </section>
+        <section>
+            <h1>圖片</h1>
+            <img src="https://www.cadiis.com.tw/media/com_rsseo/images/webp/c036150d4fa78ebc286a03532c23c20d.webp"> </section>
+    </article>
+    <footer>
+        資料在這!<a href="https://zh.wikipedia.org/zh-tw/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1">維基百科</a>
+    </footer>
+</body>
+
+</html>
